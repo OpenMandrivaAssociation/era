@@ -45,3 +45,7 @@ Maui Clock app
 %ninja_install -C build
 
 %files
+%{_bindir}/era
+%{_datadir}/applications/org.kde.era.desktop
+%{_datadir}/metainfo/org.kde.era.appdata.xml
+%{_iconsdir}/hicolor/scalable/apps/era.svg
