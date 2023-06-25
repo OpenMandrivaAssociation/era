@@ -2,7 +2,7 @@
 
 Name:		era
 Version:	0.1.0
-Release:	%{?snapshot:0.%{snapshot}.}1
+Release:	%{?snapshot:0.%{snapshot}.}2
 Summary:	Maui Clock app
 URL:    	https://mauikit.org
 Source0:	https://invent.kde.org/maui/era/-/archive/%{?snapshot:master}%{!?snapshot:v%{version}}/%{name}-%{?snapshot:master}%{!?snapshot:v%{version}}.tar.bz2%{?snapshot:#/%{name}-%{snapshot}.tar.bz2}
