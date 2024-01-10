@@ -1,8 +1,9 @@
 #define snapshot 20220107
+%define git 20231019
 
 Name:		era
-Version:	0.1.0
-Release:	%{?snapshot:0.%{snapshot}.}2
+Version:	0.5.1
+Release:	%{?snapshot:0.%{snapshot}.}%{git}.0
 Summary:	Maui Clock app
 URL:    	https://mauikit.org
 Source0:	https://invent.kde.org/maui/era/-/archive/%{?snapshot:master}%{!?snapshot:v%{version}}/%{name}-%{?snapshot:master}%{!?snapshot:v%{version}}.tar.bz2%{?snapshot:#/%{name}-%{snapshot}.tar.bz2}
@@ -20,9 +21,9 @@ BuildRequires:	cmake(Qt5QuickControls2)
 BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(KF5CoreAddons)
-BuildRequires:	cmake(MauiKit)
-BuildRequires:  cmake(MauiKitFileBrowsing)
-BuildRequires:  cmake(MauiKitCalendar)
+BuildRequires:	cmake(MauiKit3)
+BuildRequires:  cmake(MauiKitFileBrowsing3)
+BuildRequires:  cmake(MauiKitCalendar3)
 BuildRequires:	gettext
 BuildRequires:	cmake(Qt5QuickCompiler)
 BuildRequires:	cmake(Qt5Network)
