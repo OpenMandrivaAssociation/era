@@ -6,7 +6,7 @@ Version:	0.5.1
 Release:	%{?snapshot:0.%{snapshot}.}%{git}.0
 Summary:	Maui Clock app
 URL:    	https://mauikit.org
-Source0:	https://invent.kde.org/maui/era/-/archive/%{?snapshot:master}%{!?snapshot:v%{version}}/%{name}-%{?snapshot:master}%{!?snapshot:v%{version}}.tar.bz2%{?snapshot:#/%{name}-%{snapshot}.tar.bz2}
+Source0:	https://invent.kde.org/maui/era/-/archive/%{?snapshot:master}%{!?snapshot:%{version}}/%{name}-%{?snapshot:master}%{!?snapshot:%{version}}.tar.bz2%{?snapshot:#/%{name}-%{snapshot}.tar.bz2}
 License:	GPLv3
 Group:		Development/Tools
 BuildRequires:	cmake
@@ -36,7 +36,7 @@ BuildRequires:	cmake(Qt5Widgets)
 Maui Clock app
 
 %prep
-%autosetup -p1 -n %{name}-%{?snapshot:master}%{!?snapshot:v%{version}}
+%autosetup -p1 -n %{name}-%{?snapshot:master}%{!?snapshot:%{version}}
 %cmake_kde5 -G Ninja
 
 %build
